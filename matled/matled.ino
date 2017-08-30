@@ -17,7 +17,59 @@ void setup() {
 }
 
 static const uint8_t PROGMEM
-fireworkBmp0 [] = 
+windmillBmp0[] =
+{ B11000001,
+  B01100011,
+  B00110110,
+  B00011100,
+  B00111000,
+  B01101100,
+  B11000110,
+  B10000011
+},
+windmillBmp1[] =
+{ B01100000,
+  B00110001,
+  B00011011,
+  B00111110,
+  B01111100,
+  B11011000,
+  B10001100,
+  B00000110
+},
+windmillBmp2[] =
+{ B00110000,
+  B00011000,
+  B00011001,
+  B01111111,
+  B11111110,
+  B10011000,
+  B00011000,
+  B00001100
+},
+windmillBmp3[] =
+{ B00000110,
+  B10001100,
+  B11101100,
+  B01111000,
+  B00011110,
+  B00110111,
+  B00110001,
+  B01100000
+},
+windmillBmp4[] =
+{ B10000011,
+  B11000110,
+  B01101100,
+  B00111000,
+  B00011100,
+  B00110110,
+  B01100011,
+  B11000001
+};
+
+static const uint8_t PROGMEM
+fireworkBmp0[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -27,7 +79,7 @@ fireworkBmp0 [] =
   B00000000,
   B00010000
 },
-fireworkBmp1 [] = 
+fireworkBmp1[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -37,7 +89,7 @@ fireworkBmp1 [] =
   B00010000,
   B00010000
 },
-fireworkBmp2 [] = 
+fireworkBmp2[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -47,7 +99,7 @@ fireworkBmp2 [] =
   B00010000,
   B00010000
 },
-fireworkBmp3 [] = 
+fireworkBmp3[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -57,7 +109,7 @@ fireworkBmp3 [] =
   B00010000,
   B00000000
 },
-fireworkBmp4 [] = 
+fireworkBmp4[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -67,7 +119,7 @@ fireworkBmp4 [] =
   B00000000,
   B00000000
 },
-fireworkBmp5 [] = 
+fireworkBmp5[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -77,7 +129,7 @@ fireworkBmp5 [] =
   B00000000,
   B00000000
 },
-fireworkBmp6 [] = 
+fireworkBmp6[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -87,7 +139,7 @@ fireworkBmp6 [] =
   B00000000,
   B00000000
 },
-fireworkBmp7 [] = 
+fireworkBmp7[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -97,7 +149,7 @@ fireworkBmp7 [] =
   B00000000,
   B00000000
 },
-fireworkBmp8 [] = 
+fireworkBmp8[] = 
 { B00000000,
   B00000000,
   B00100100,
@@ -107,7 +159,7 @@ fireworkBmp8 [] =
   B00000000,
   B00000000
 },
-fireworkBmp9 [] = 
+fireworkBmp9[] = 
 { B00000000,
   B00000000,
   B00101100,
@@ -117,7 +169,7 @@ fireworkBmp9 [] =
   B00000000,
   B00000000
 },
-fireworkBmp10 [] = 
+fireworkBmp10[] = 
 { B00000000,
   B00011000,
   B00100100,
@@ -127,8 +179,7 @@ fireworkBmp10 [] =
   B00011000,
   B00000000
 },
-
-fireworkBmp11 [] = 
+fireworkBmp11[] = 
 { B00000000,
   B01011010,
   B00100100,
@@ -138,7 +189,7 @@ fireworkBmp11 [] =
   B01011010,
   B00000000
 },
-fireworkBmp12 [] = 
+fireworkBmp12[] = 
 { B00000100,
   B01011010,
   B10100100,
@@ -148,7 +199,7 @@ fireworkBmp12 [] =
   B01011010,
   B00100000
 },
-fireworkBmp13 [] = 
+fireworkBmp13[] = 
 { B00100100,
   B01011010,
   B10100101,
@@ -158,7 +209,7 @@ fireworkBmp13 [] =
   B01011010,
   B00100100
 },
-fireworkBmp14 [] = 
+fireworkBmp14[] = 
 { B00111100,
   B01011010,
   B10100101,
@@ -168,7 +219,7 @@ fireworkBmp14 [] =
   B01011010,
   B00111100
 },
-fireworkBmp15 [] = 
+fireworkBmp15[] = 
 { B00100100,
   B01011010,
   B10100101,
@@ -178,7 +229,7 @@ fireworkBmp15 [] =
   B01011010,
   B00100100
 },
-fireworkBmp16 [] = 
+fireworkBmp16[] = 
 { B00000000,
   B01011010,
   B10100101,
@@ -188,7 +239,7 @@ fireworkBmp16 [] =
   B01011010,
   B00000000
 },
-fireworkBmp17 [] = 
+fireworkBmp17[] = 
 { B00000000,
   B00011000,
   B00100100,
@@ -198,7 +249,7 @@ fireworkBmp17 [] =
   B00011000,
   B00000000
 },
-fireworkBmp18 [] = 
+fireworkBmp18[] = 
 { B00000000,
   B00001000,
   B00100100,
@@ -208,7 +259,7 @@ fireworkBmp18 [] =
   B00010000,
   B00000000
 },
-fireworkBmp19 [] = 
+fireworkBmp19[] = 
 { B00000000,
   B00000000,
   B00100100,
@@ -218,7 +269,7 @@ fireworkBmp19 [] =
   B00000000,
   B00000000
 },
-fireworkBmp20 [] = 
+fireworkBmp20[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -228,7 +279,7 @@ fireworkBmp20 [] =
   B00000000,
   B00000000
 },
-fireworkBmp21 [] = 
+fireworkBmp21[] = 
 { B00000000,
   B00000000,
   B00000000,
@@ -572,21 +623,7 @@ void loop() {
 }
 
 void wave() {
-  matrix.clear();
-  matrix.drawBitmap(0, 0, smile_bmp, 8, 8, LED_ON);
-  matrix.writeDisplay();
-  delay(500);
-
-  matrix.clear();
-  matrix.drawBitmap(0, 0, neutral_bmp, 8, 8, LED_ON);
-  matrix.writeDisplay();
-  delay(500);
-
-  matrix.clear();
-  matrix.drawBitmap(0, 0, frown_bmp, 8, 8, LED_ON);
-  matrix.writeDisplay();
-  delay(500);
-  matrix.clear();
+  
 }
 
 void logo() {
@@ -965,6 +1002,36 @@ void dogJump() {
     delay(400);
 }
 
+void windmill() {
+  matrix.setRotation(90);
+  
+  matrix.clear();
+  matrix.drawBitmap(0, 0, windmillBmp0, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, windmillBmp1, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, windmillBmp2, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, windmillBmp3, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, windmillBmp4, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+}
+
 void firework() {
   matrix.setRotation(90);
 
@@ -1097,8 +1164,6 @@ void startRead() {
     logo();
   } else if (inputString == "temperature") {
     temperature();
-  } else if (inputString == "wave") {
-    wave();
   } else if (inputString == "dogsitdown") {
     dogSitdown();
   } else if (inputString == "dogbark") {
