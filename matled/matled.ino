@@ -667,6 +667,41 @@ void dogJump() {
   matrix.drawBitmap(0, 0, dogJumpBmp2, 8, 8, LED_ON);
   matrix.writeDisplay();
   delay(400);
+
+  matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp3, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp4, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+    
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp5, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp6, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp7, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+    
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp8, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp9, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
 }
 
 void startRead() {
