@@ -742,7 +742,7 @@ void dogJump() {
     delay(400);
 }
 
-void title() {
+void logo() {
   for (int8_t x=7; x>=-36; x--) {
   matrix.clear();
   matrix.setCursor(x,0);
