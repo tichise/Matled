@@ -46,6 +46,77 @@ dogJumpBmp2[] =
   B00111100,
   B00100100,
   B00000000
+},
+dogJumpBmp3[] =
+{ B00000000,
+  B00000000,
+  B00000010,
+  B00100011,
+  B00011111,
+  B00011110,
+  B00100001,
+  B00000000
+},
+dogJumpBmp4[] =
+{ B00000000,
+  B00000000,
+  B00000000,
+  B00000000,
+  B00001111,
+  B00000111,
+  B00000010,
+  B00000000
+},
+dogJumpBmp5[] =
+{ B00000000,
+  B00000000,
+  B00000000,
+  B00000010,
+  B00000001,
+  B00000001,
+  B00000010,
+  B00000000
+},
+dogJumpBmp6[] =
+{ B00000000,
+  B00000000,
+  B00000000,
+  B11000000,
+  B11000000,
+  B00000000,
+  B10000000,
+  B00000000
+},
+dogJumpBmp7[] =
+{ B00000000,
+  B00000000,
+  B01000000,
+  B01110000,
+  B11110000,
+  B11000000,
+  B00100000,
+  B00000000
+},
+dogJumpBmp8[] =
+{ B00000000,
+  B00000000,
+  B00010000,
+  B00011100,
+  B11111100,
+  B11110000,
+  B00100000,
+  B00000000
+},
+dogJumpBmp9[] =
+{
+  B00000000,
+  B00000000,
+  B00001000,
+  B10001110,
+  B01111110,
+  B01111000,
+  B01001000,
+  B00000000
 };
 
 static const uint8_t PROGMEM
@@ -596,6 +667,41 @@ void dogJump() {
   matrix.drawBitmap(0, 0, dogJumpBmp2, 8, 8, LED_ON);
   matrix.writeDisplay();
   delay(400);
+
+  matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp3, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp4, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+    
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp5, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp6, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp7, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+    
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp8, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
+
+    matrix.clear();
+    matrix.drawBitmap(0, 0, dogJumpBmp9, 8, 8, LED_ON);
+    matrix.writeDisplay();
+    delay(400);
 }
 
 void startRead() {
