@@ -1038,112 +1038,112 @@ void firework() {
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp0, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp1, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp2, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp3, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp4, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
   
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp5, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp6, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp7, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
   
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp8, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp9, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(80);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp10, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(120);
   
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp11, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(150);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp12, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(180);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp13, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(210);
   
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp14, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(250);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp15, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(250);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp16, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(250);
   
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp17, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(250);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp18, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(250);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp19, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(250);
   
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp20, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(200);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp21, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(180);
 }
 
 void startRead() {
@@ -1176,5 +1176,7 @@ void startRead() {
     dogShakeTail();
   } else if (inputString == "firework") {
     firework();
+  } else if (inputString == "windmill") {
+    windmill();
   }
 }
