@@ -742,6 +742,17 @@ void dogJump() {
     delay(400);
 }
 
+void title() {
+  for (int8_t x=7; x>=-36; x--) {
+  matrix.clear();
+  matrix.setCursor(x,0);
+  matrix.print("Matled");
+  matrix.writeDisplay();
+  delay(100);
+  }
+}
+
+
 void startRead() {
   Bean.setLed(0, 0, 0);
   Bean.setLedGreen(255);
