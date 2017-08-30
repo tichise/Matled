@@ -17,7 +17,7 @@ void setup() {
 }
 
 static const uint8_t PROGMEM
-firework0
+fireworkBmp0
 { B00000000,
   B00000000,
   B00000000,
@@ -27,7 +27,7 @@ firework0
   B00000000,
   B00010000
 },
-firework1
+fireworkBmp1
 { B00000000,
   B00000000,
   B00000000,
@@ -37,7 +37,7 @@ firework1
   B00010000,
   B00010000
 },
-firework2
+fireworkBmp2
 { B00000000,
   B00000000,
   B00000000,
@@ -47,7 +47,7 @@ firework2
   B00010000,
   B00010000
 },
-firework3
+fireworkBmp3
 { B00000000,
   B00000000,
   B00000000,
@@ -57,7 +57,7 @@ firework3
   B00010000,
   B00000000
 },
-firework4
+fireworkBmp4
 { B00000000,
   B00000000,
   B00000000,
@@ -67,7 +67,7 @@ firework4
   B00000000,
   B00000000
 },
-firework5
+fireworkBmp5
 { B00000000,
   B00000000,
   B00000000,
@@ -87,7 +87,7 @@ firewor6
   B00000000,
   B00000000
 },
-firework7
+fireworkBmp7
 { B00000000,
   B00000000,
   B00000000,
@@ -97,7 +97,7 @@ firework7
   B00000000,
   B00000000
 },
-firework8
+fireworkBmp8
 { B00000000,
   B00000000,
   B00100100,
@@ -107,7 +107,7 @@ firework8
   B00000000,
   B00000000
 },
-firework9
+fireworkBmp9
 { B00000000,
   B00000000,
   B00101100,
@@ -117,7 +117,7 @@ firework9
   B00000000,
   B00000000
 },
-firework10
+fireworkBmp10
 { B00000000,
   B00011000,
   B00100100,
@@ -128,7 +128,7 @@ firework10
   B00000000
 },
 
-firework11
+fireworkBmp11
 { B00000000,
   B01011010,
   B00100100,
@@ -138,7 +138,7 @@ firework11
   B01011010,
   B00000000
 },
-firework12
+fireworkBmp12
 { B00000100,
   B01011010,
   B10100100,
@@ -148,7 +148,7 @@ firework12
   B01011010,
   B00100000
 },
-firework13
+fireworkBmp13
 { B00100100,
   B01011010,
   B10100101,
@@ -158,7 +158,7 @@ firework13
   B01011010,
   B00100100
 },
-firework13
+fireworkBmp13
 { B10100101,
   B01011010,
   B10100101,
@@ -168,7 +168,7 @@ firework13
   B01011010,
   B10100101
 },
-firework14
+fireworkBmp14
 { B00111100,
   B01011010,
   B10100101,
@@ -178,7 +178,7 @@ firework14
   B01011010,
   B00111100
 },
-firework15
+fireworkBmp15
 { B00100100,
   B01011010,
   B10100101,
@@ -188,7 +188,7 @@ firework15
   B01011010,
   B00100100
 },
-firework16
+fireworkBmp16
 { B00000000,
   B01011010,
   B10100101,
@@ -198,7 +198,7 @@ firework16
   B01011010,
   B00000000
 },
-firework17
+fireworkBmp17
 { B00000000,
   B00011000,
   B00100100,
@@ -208,7 +208,7 @@ firework17
   B00011000,
   B00000000
 },
-firework18
+fireworkBmp18
 { B00000000,
   B00001000,
   B00100100,
@@ -218,7 +218,7 @@ firework18
   B00010000,
   B00000000
 },
-firework19
+fireworkBmp19
 { B00000000,
   B00000000,
   B00100100,
@@ -228,7 +228,7 @@ firework19
   B00000000,
   B00000000
 },
-firework20
+fireworkBmp20
 { B00000000,
   B00000000,
   B00000000,
@@ -238,7 +238,7 @@ firework20
   B00000000,
   B00000000
 },
-firework21
+fireworkBmp21
 { B00000000,
   B00000000,
   B00000000,
@@ -248,7 +248,6 @@ firework21
   B00000000,
   B00000000
 };
-
 
 static const uint8_t PROGMEM
 dogJumpBmp0[] =
@@ -976,6 +975,120 @@ void dogJump() {
     delay(400);
 }
 
+void firework() {
+  matrix.setRotation(90);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp0, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp1, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp2, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp3, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp4, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+  
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp5, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp6, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp7, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+  
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp8, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp9, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp10, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+  
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp11, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp12, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp13, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+  
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp14, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp15, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp16, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+  
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp17, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp18, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp19, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+  
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp20, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, fireworkBmp21, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+}
+
 void startRead() {
   Bean.setLed(0, 0, 0);
   Bean.setLedGreen(255);
@@ -1006,5 +1119,7 @@ void startRead() {
     dogJump();
   } else if (inputString == "dogshaketail") {
     dogShakeTail();
+  } else if (inputString == "firework") {
+    firework();
   }
 }
