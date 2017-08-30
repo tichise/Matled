@@ -1008,27 +1008,27 @@ void windmill() {
   matrix.clear();
   matrix.drawBitmap(0, 0, windmillBmp0, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(200);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, windmillBmp1, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(200);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, windmillBmp2, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(200);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, windmillBmp3, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(200);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, windmillBmp4, 8, 8, LED_ON);
   matrix.writeDisplay();
-  delay(400);
+  delay(200);
 
 }
 
