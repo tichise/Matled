@@ -70,7 +70,7 @@ windmillBmp4[] =
 };
 
 static const uint8_t PROGMEM
-fireworkBmp0[] = 
+fireworkBmp0[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -80,7 +80,7 @@ fireworkBmp0[] =
   B00000000,
   B00010000
 },
-fireworkBmp1[] = 
+fireworkBmp1[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -90,7 +90,7 @@ fireworkBmp1[] =
   B00010000,
   B00010000
 },
-fireworkBmp2[] = 
+fireworkBmp2[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -100,7 +100,7 @@ fireworkBmp2[] =
   B00010000,
   B00010000
 },
-fireworkBmp3[] = 
+fireworkBmp3[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -110,7 +110,7 @@ fireworkBmp3[] =
   B00010000,
   B00000000
 },
-fireworkBmp4[] = 
+fireworkBmp4[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -120,7 +120,7 @@ fireworkBmp4[] =
   B00000000,
   B00000000
 },
-fireworkBmp5[] = 
+fireworkBmp5[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -130,7 +130,7 @@ fireworkBmp5[] =
   B00000000,
   B00000000
 },
-fireworkBmp6[] = 
+fireworkBmp6[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -140,7 +140,7 @@ fireworkBmp6[] =
   B00000000,
   B00000000
 },
-fireworkBmp7[] = 
+fireworkBmp7[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -150,7 +150,7 @@ fireworkBmp7[] =
   B00000000,
   B00000000
 },
-fireworkBmp8[] = 
+fireworkBmp8[] =
 { B00000000,
   B00000000,
   B00100100,
@@ -160,7 +160,7 @@ fireworkBmp8[] =
   B00000000,
   B00000000
 },
-fireworkBmp9[] = 
+fireworkBmp9[] =
 { B00000000,
   B00000000,
   B00101100,
@@ -170,7 +170,7 @@ fireworkBmp9[] =
   B00000000,
   B00000000
 },
-fireworkBmp10[] = 
+fireworkBmp10[] =
 { B00000000,
   B00011000,
   B00100100,
@@ -180,7 +180,7 @@ fireworkBmp10[] =
   B00011000,
   B00000000
 },
-fireworkBmp11[] = 
+fireworkBmp11[] =
 { B00000000,
   B01011010,
   B00100100,
@@ -190,7 +190,7 @@ fireworkBmp11[] =
   B01011010,
   B00000000
 },
-fireworkBmp12[] = 
+fireworkBmp12[] =
 { B00000100,
   B01011010,
   B10100100,
@@ -200,7 +200,7 @@ fireworkBmp12[] =
   B01011010,
   B00100000
 },
-fireworkBmp13[] = 
+fireworkBmp13[] =
 { B00100100,
   B01011010,
   B10100101,
@@ -210,7 +210,7 @@ fireworkBmp13[] =
   B01011010,
   B00100100
 },
-fireworkBmp14[] = 
+fireworkBmp14[] =
 { B00111100,
   B01011010,
   B10100101,
@@ -220,7 +220,7 @@ fireworkBmp14[] =
   B01011010,
   B00111100
 },
-fireworkBmp15[] = 
+fireworkBmp15[] =
 { B00100100,
   B01011010,
   B10100101,
@@ -230,7 +230,7 @@ fireworkBmp15[] =
   B01011010,
   B00100100
 },
-fireworkBmp16[] = 
+fireworkBmp16[] =
 { B00000000,
   B01011010,
   B10100101,
@@ -240,7 +240,7 @@ fireworkBmp16[] =
   B01011010,
   B00000000
 },
-fireworkBmp17[] = 
+fireworkBmp17[] =
 { B00000000,
   B00011000,
   B00100100,
@@ -250,7 +250,7 @@ fireworkBmp17[] =
   B00011000,
   B00000000
 },
-fireworkBmp18[] = 
+fireworkBmp18[] =
 { B00000000,
   B00001000,
   B00100100,
@@ -260,7 +260,7 @@ fireworkBmp18[] =
   B00010000,
   B00000000
 },
-fireworkBmp19[] = 
+fireworkBmp19[] =
 { B00000000,
   B00000000,
   B00100100,
@@ -270,7 +270,7 @@ fireworkBmp19[] =
   B00000000,
   B00000000
 },
-fireworkBmp20[] = 
+fireworkBmp20[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -280,7 +280,7 @@ fireworkBmp20[] =
   B00000000,
   B00000000
 },
-fireworkBmp21[] = 
+fireworkBmp21[] =
 { B00000000,
   B00000000,
   B00000000,
@@ -624,7 +624,7 @@ void loop() {
 }
 
 void wave() {
-  
+
 }
 
 void logo() {
@@ -724,123 +724,52 @@ void temperature() {
   Bean.sleep(50);
 }
 
-int split(String data, char delimiter, String *dst) {
-  int index = 0;
-  int arraySize = (sizeof(data) / sizeof((data)[0]));
-  int datalength = data.length();
-  for (int i = 0; i < datalength; i++) {
-    char tmp = data.charAt(i);
-    if ( tmp == delimiter ) {
-      index++;
-      if ( index > (arraySize - 1)) return -1;
+int split(String *result, size_t resultsize, String data, char delimiter){
+    int index = 0;
+    int datalength = data.length();
+    for (int i = 0; i < datalength; i++) {
+        char tmp = data.charAt(i);
+        if ( tmp == delimiter ) {
+            index++;
+            if ( index > (resultsize - 1)) return -1;
+        }
+        else result[index] += tmp;
     }
-    else dst[index] += tmp;
-  }
-  return (index + 1);
+    return (index + 1);
 }
 
-uint8_t getMatrixRow(String matrixRow) {
-  /*
-    char matrixRowUint[9];
-    String matrixRowString = String("B"+matrixRow);
-    matrixRowString.toCharArray(matrixRowUint, 9);
-    uint8_t result[9];
-    result = `B00111100;
-  */
-  // return result;
+uint8_t getMatrixRow(String rowString) {
+  int rowInt = rowString.toInt();
+  unsigned char result = (unsigned char)rowInt;
+
+  return result;
 }
 
 void displayBitmap(String replacedString) {
-
-
+  // replacedString = "60.66.165.129.165.153.66.60";
   String matrixRows[8] = {};
+  char delimiter = '.'; 
+  split(matrixRows, 8, replacedString, delimiter);
 
-  split(replacedString, '.', matrixRows);
-
-  // uint8_t matrixRow1[9] = getMatrixRow(matrixRows[0]);
-
-  String matrixRowStr1 = String("B" + matrixRows[0]);
-  String matrixRowStr2 = String("B" + matrixRows[1]);
-  String matrixRowStr3 = String("B" + matrixRows[2]);
-  String matrixRowStr4 = String("B" + matrixRows[3]);
-  String matrixRowStr5 = String("B" + matrixRows[4]);
-  String matrixRowStr6 = String("B" + matrixRows[5]);
-  String matrixRowStr7 = String("B" + matrixRows[6]);
-  String matrixRowStr8 = String("B" + matrixRows[7]);
-
-
-  // Define
-  String str = matrixRowStr1;
-
-  // Prepare the character array (the buffer)
-  char char_array[matrixRowStr1.length()];
-
-  // Copy it over
-  str.toCharArray(char_array, matrixRowStr1.length());
-
-  // unsigned char test2 =  (unsigned char *)char_array;
-
-  // char *ptr = data; while (*ptr != '\0') ble_write((unsigned char)*ptr);
-
-  /*
-    //  = matrixRowStr1.ToCharArray();
-    // unsigned char test[9];
-    char test[9];
-    matrixRowStr1.toCharArray(test, test.length());
-  */
-
-  /*
-    String FileMeasure="nama sucipt0";
-                       int TempNumOne=sizeof(FileMeasure);
-                       //char Filename[100];
-                       for (int a=0;a<=16;a++)//TempNumOne;a++)
-                       {
-                       Data[a]=FileMeasure[a];
-                       }
-  */
-
-  unsigned char matrixRow1 = B00111100;
-  unsigned char matrixRow2 = B00111100;
-  unsigned char matrixRow3 = B00111100;
-  unsigned char matrixRow4 = B00111100;
-  unsigned char matrixRow5 = B00111100;
-  unsigned char matrixRow6 = B00111100;
-  unsigned char matrixRow7 = B00111100;
-  unsigned char matrixRow8 = B00111100;
-
-  /*
-    // char *s1　：　複写先の文字型配列 const char *s2　：　複写する文字列
-    strcpy(unsigned char matrixRow1, matrixRows[0]);
-
-    unsigned char m_Test[8];
-    strcpy((char*)m_Test, "Hello world");
-
-
-    strcpy((char*)valString.c_str(), valChar);
-  */
+  unsigned char matrixRow1 = getMatrixRow(matrixRows[0]);
+  unsigned char matrixRow2 = getMatrixRow(matrixRows[1]);
+  unsigned char matrixRow3 = getMatrixRow(matrixRows[2]);
+  unsigned char matrixRow4 = getMatrixRow(matrixRows[3]);
+  unsigned char matrixRow5 = getMatrixRow(matrixRows[4]);
+  unsigned char matrixRow6 = getMatrixRow(matrixRows[5]);
+  unsigned char matrixRow7 = getMatrixRow(matrixRows[6]);
+  unsigned char matrixRow8 = getMatrixRow(matrixRows[7]);
 
 
   /*
-    uint8_t matrixRow2[9];
-    uint8_t matrixRow3[9];
-    uint8_t matrixRow4[9];
-    uint8_t matrixRow5[9];
-    uint8_t matrixRow6[9];
-    uint8_t matrixRow7[9];
-    uint8_t matrixRow8[9];
-  */
-
-  /*
-
-
-    matrixRowStr1.toCharArray(matrixRow1, 9);
-    matrixRowStr2.toCharArray(matrixRow2, 9);
-    matrixRowStr3.toCharArray(matrixRow3, 9);
-    matrixRowStr4.toCharArray(matrixRow4, 9);
-    matrixRowStr5.toCharArray(matrixRow5, 9);
-    matrixRowStr6.toCharArray(matrixRow6, 9);
-    matrixRowStr7.toCharArray(matrixRow7, 9);
-    matrixRowStr8.toCharArray(matrixRow8, 9);
+    unsigned char matrixRow1 = 60;
+    unsigned char matrixRow2 = 66;
+    unsigned char matrixRow3 = 165;
+    unsigned char matrixRow4 = 129;
+    unsigned char matrixRow5 = 165;
+    unsigned char matrixRow6 = 153;
+    unsigned char matrixRow7 = 66;
+    unsigned char matrixRow8 = 60;
   */
 
   uint8_t PROGMEM receive_bmp[] =
@@ -853,22 +782,6 @@ void displayBitmap(String replacedString) {
     matrixRow7,
     matrixRow8
   };
-
-  /*
-    unsigned char num = B00111100;
-
-    uint8_t PROGMEM receive_bmp[] =
-    {
-    num,
-    B00111100,
-    B00111100,
-    B00111100,
-    B00111100,
-    B00111100,
-    B00111100,
-    B00111100
-    };
-  */
 
   matrix.clear();
   matrix.drawBitmap(0, 0, receive_bmp, 8, 8, LED_ON);
@@ -959,42 +872,42 @@ void dogJump() {
   delay(400);
 
   matrix.clear();
-    matrix.drawBitmap(0, 0, dogJumpBmp3, 8, 8, LED_ON);
-    matrix.writeDisplay();
-    delay(400);
+  matrix.drawBitmap(0, 0, dogJumpBmp3, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
 
-    matrix.clear();
-    matrix.drawBitmap(0, 0, dogJumpBmp4, 8, 8, LED_ON);
-    matrix.writeDisplay();
-    delay(400);
-    
-    matrix.clear();
-    matrix.drawBitmap(0, 0, dogJumpBmp5, 8, 8, LED_ON);
-    matrix.writeDisplay();
-    delay(400);
+  matrix.clear();
+  matrix.drawBitmap(0, 0, dogJumpBmp4, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
 
-    matrix.clear();
-    matrix.drawBitmap(0, 0, dogJumpBmp6, 8, 8, LED_ON);
-    matrix.writeDisplay();
-    delay(400);
+  matrix.clear();
+  matrix.drawBitmap(0, 0, dogJumpBmp5, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
 
-    matrix.clear();
-    matrix.drawBitmap(0, 0, dogJumpBmp7, 8, 8, LED_ON);
-    matrix.writeDisplay();
-    delay(400);
-    
-    matrix.clear();
-    matrix.drawBitmap(0, 0, dogJumpBmp8, 8, 8, LED_ON);
-    matrix.writeDisplay();
-    delay(400);
+  matrix.clear();
+  matrix.drawBitmap(0, 0, dogJumpBmp6, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
 
-    matrix.clear();
-    matrix.drawBitmap(0, 0, dogJumpBmp9, 8, 8, LED_ON);
-    matrix.writeDisplay();
-    delay(400);
+  matrix.clear();
+  matrix.drawBitmap(0, 0, dogJumpBmp7, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, dogJumpBmp8, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
+
+  matrix.clear();
+  matrix.drawBitmap(0, 0, dogJumpBmp9, 8, 8, LED_ON);
+  matrix.writeDisplay();
+  delay(400);
 }
 
-void windmill() {  
+void windmill() {
   matrix.clear();
   matrix.drawBitmap(0, 0, windmillBmp0, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -1047,7 +960,7 @@ void firework() {
   matrix.drawBitmap(0, 0, fireworkBmp4, 8, 8, LED_ON);
   matrix.writeDisplay();
   delay(80);
-  
+
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp5, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -1062,7 +975,7 @@ void firework() {
   matrix.drawBitmap(0, 0, fireworkBmp7, 8, 8, LED_ON);
   matrix.writeDisplay();
   delay(80);
-  
+
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp8, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -1077,7 +990,7 @@ void firework() {
   matrix.drawBitmap(0, 0, fireworkBmp10, 8, 8, LED_ON);
   matrix.writeDisplay();
   delay(120);
-  
+
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp11, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -1092,7 +1005,7 @@ void firework() {
   matrix.drawBitmap(0, 0, fireworkBmp13, 8, 8, LED_ON);
   matrix.writeDisplay();
   delay(210);
-  
+
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp14, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -1107,7 +1020,7 @@ void firework() {
   matrix.drawBitmap(0, 0, fireworkBmp16, 8, 8, LED_ON);
   matrix.writeDisplay();
   delay(250);
-  
+
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp17, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -1122,7 +1035,7 @@ void firework() {
   matrix.drawBitmap(0, 0, fireworkBmp19, 8, 8, LED_ON);
   matrix.writeDisplay();
   delay(250);
-  
+
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp20, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -1142,11 +1055,7 @@ void startRead() {
   Serial.println("inputString:" + inputString);
 
   if (inputString.startsWith("pict")) {
-    // inputString = "pict0011110001000010101001011000000110100101100110010100001000111100";
-
     inputString.replace("pict", "");
-    Serial.println("replacedString:" + inputString);
-
     displayBitmap(inputString);
   } else if (inputString == "logo") {
     logo();
