@@ -14,6 +14,7 @@ void setup() {
   matrix.begin(0x70);  // pass in the address
 
   matrix.clear();
+  matrix.setRotation(90);
 }
 
 static const uint8_t PROGMEM
@@ -877,7 +878,6 @@ void displayBitmap(String replacedString) {
 }
 
 void dogSitdown() {
-  matrix.setRotation(90);
 
   matrix.clear();
   matrix.drawBitmap(0, 0, dogSitdownBmp0, 8, 8, LED_ON);
@@ -906,8 +906,6 @@ void dogSitdown() {
 }
 
 void dogBark() {
-  matrix.setRotation(90);
-
   matrix.clear();
   matrix.drawBitmap(0, 0, dogBarkBmp0, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -920,8 +918,6 @@ void dogBark() {
 }
 
 void dogShakeTail() {
-  matrix.setRotation(90);
-
   matrix.clear();
   matrix.drawBitmap(0, 0, dogShakeTailBmp0, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -935,8 +931,6 @@ void dogShakeTail() {
 }
 
 void dogEat() {
-  matrix.setRotation(90);
-
   matrix.clear();
   matrix.drawBitmap(0, 0, dogEatBmp0, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -949,8 +943,6 @@ void dogEat() {
 }
 
 void dogJump() {
-  matrix.setRotation(90);
-
   matrix.clear();
   matrix.drawBitmap(0, 0, dogJumpBmp0, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -1002,9 +994,7 @@ void dogJump() {
     delay(400);
 }
 
-void windmill() {
-  matrix.setRotation(90);
-  
+void windmill() {  
   matrix.clear();
   matrix.drawBitmap(0, 0, windmillBmp0, 8, 8, LED_ON);
   matrix.writeDisplay();
@@ -1033,8 +1023,6 @@ void windmill() {
 }
 
 void firework() {
-  matrix.setRotation(90);
-
   matrix.clear();
   matrix.drawBitmap(0, 0, fireworkBmp0, 8, 8, LED_ON);
   matrix.writeDisplay();
